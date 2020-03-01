@@ -1565,13 +1565,150 @@ void main()
 
 ### Named Parameter Clarification
 
+- https://api.flutter.dev/flutter/material/Scaffold-class.html
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(),
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
+
 ### Required Parameters
+
+- https://api.flutter.dev/flutter/material/FloatingActionButton-class.html
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Hi there!');
+        }
+      ),
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
 
 ### Child Parameters
 
+- https://api.flutter.dev/flutter/material/FloatingActionButton-class.html
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Text('+'),
+        onPressed: () {
+          print('Hi there!');
+        }
+      ),
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
+
 ### Displaying Icons
 
+- https://api.flutter.dev/flutter/widgets/Icon-class.html
+- https://material.io/resources/icons/?style=baseline
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print('Hi there!');
+        }
+      ),
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
+
 ### Adding Custom Widgets
+
+-> Create folder "src" inside "lib" folder
+
+-> Inside "src" folder create the file "app.dart"
+
+<figure><code><b><sup>lib / src / app.dart</sup></b></code>
+  
+```dart
+// Import flutter helper library
+import 'package:flutter/material.dart'
+
+// Creat a class that will be our custom widget
+// This class must extend the 'StatelssWidget' base class
+
+// Must define a 'build' method that returns
+// the widgets that *this* widget will show
+```
+
+<figure><code><b><sup>lib / main.dart</sup></b></code>
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()
+{
+  var app = MaterialApp(
+    home: Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          print('Hi there!');
+        }
+      ),
+      appBar: AppBar(
+        title: Text('Lets see some images!'),
+      ),
+    ),
+  );
+
+  runApp(app);
+}
+```
 
 ## State Design with Flutter Apps
 
