@@ -1284,33 +1284,112 @@ class Card
 
 ### Flutter Setup on MacOS
 
+- Install Flutter CLI - https://flutter.dev/docs/get-started/install/macos
+- Setup for Android
+- Setup for iOS
+
+Download the flutter_macos_X-stable.zip
+
 ### SDK Extraction
+
+- Download SDK zip
+- Move zip to a 'workspace' directory on your machine
+- Extract zip
+- Set up 'PATH' variable to look at the folder
 
 ### Editing the PATH Variable
 
+Terminal
+```
+echo $PATH
+```
+
+Navigate to the flutter folder (replace the path with the path on your computer)
+```
+cd /Users/macbook/Documents/Programming/flutter_workspace/flutter/bin
+```
+
+Add that bin folder to the PATH variable
+```
+cd ~
+```
+
+```
+ls -a
+```
+
+```
+nano .bash_profile
+```
+
+Add this to your .bash_profile file replacing the path in your computer)
+```
+export PATH=/Users/macbook/Documents/Programming/flutter_workspace/flutter/bin:$PATH
+```
+
+Close your terminal and open a new one
+
+```
+flutter
+```
+
 ### XCODE License
+
+```
+sudo xcodebuild -license
+```
+
+Enter, q, and agree
 
 ### Generating Flutter Projects
 
+Go to your workspace
+```
+cd /Users/macbook/Documents/Programming/flutter_workspace/
+```
+
+Create a project called pics
 ```
 flutter create pics
 ```
   
 ## MacOS Setup - Android
 
-  ### Android Setup on MacOS
+### Android Setup on MacOS
+
+- Download and Install Android Studio - https://flutter.dev/docs/get-started/install/macos#android-setup
   
-  ### Android Dependencies
-  
-  ### Android Project Setup
-  
-  ### More Android Dependencies!
-  
-  ### Android Emulator Creation
-  
-  ### Flutter Startup
-  
-  ### Finished Android Setup
+### Android Dependencies
+
+- Open Android Studio > Standard > Next > Finish
+
+### Android Project Setup
+
+- Start New Project > Next > Next > Next > Next > Finish
+
+### More Android Dependencies!
+
+Check if Gradle was synced correctly, if not install the build tools
+
+### Android Emulator Creation
+
+- Tools > AVD Manager > Create Virtual Device > Nexus 5X
+- Choose and Download a System Image > Next > Finish
+- Actions > Play Button
+
+### Flutter Startup
+
+```
+flutter doctor --android-licenses
+```
+
+Accept all the licenses
+
+```
+flutter run
+```
+
+### Finished Android Setup
 
 ## MacOS Setup - iOS
 
